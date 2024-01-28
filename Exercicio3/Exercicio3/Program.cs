@@ -21,13 +21,14 @@
             }
 
             Random random = new Random();
-            int passes = random.Next(1, 10); //trocar o máximo para 100, mas eu queria os testes mais rápidos
+            int passes = random.Next(1, 100); //trocar o máximo para 100, mas eu queria os testes mais rápidos
 
             while (players.Count > 1)
             {
                 for (int i = 0; i < passes; i++)
                 {
                     string currentPlayer = players.Dequeue();
+                    Console.WriteLine($"A batata está nas mãos do jogador {currentPlayer}");
                     players.Enqueue(currentPlayer);
                 }
 
