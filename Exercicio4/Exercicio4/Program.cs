@@ -8,9 +8,9 @@
             string? text = Console.ReadLine();
             text = text.ToLower();
             
-            Dictionary<string, int> WordData = new Dictionary<string, int>();
-
-            WordData = GetTextData(text);
+            // Só removi o "new" pois o objeto estava sendo substituido logo em seguida.
+            // Uma alocação de memória a menos ;P
+            Dictionary<string, int> WordData = GetTextData(text);
 
             foreach (var word in WordData)
             {

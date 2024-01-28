@@ -29,11 +29,13 @@
         static List<string> WordsFilter(List<string> input)
         {
             List<string> output = new List<string>();
-            foreach (string wold in input)
+            foreach (string word in input)
             {
-                if(wold.Length >10)
+                // Os limites são sempre focos de bugs.
+                // Na implementação anterior havia um bug que deixava de lado as palavras que tinham exatamente 10 caracteres.
+                if (word.Length >= 10)
                 {
-                    output.Add(wold);
+                    output.Add(word);
                 }
             }
             return output;
